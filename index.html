@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia de Inglés - Show Style</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- PANTALLA 1: REGISTRO / LOGIN + RANKING ABAJO -->
+    <div id="pantalla-registro" class="card marco-luces">
+      <div class="logo-tv">
+        <div class="bloque b-verde">PAST</div>
+        <div class="bloque b-amarillo">TENCES</div>
+      </div>
+
+      <p class="instruccion-registro">Ingresa tu nombre para comenzar:</p>
+      
+      <div class="form-registro">
+        <input type="text" id="nombre-jugador" placeholder="Tu nombre o apodo" autocomplete="off">
+        <button id="btn-iniciar">¡Empezar Juego!</button>
+      </div>
+
+      <div class="scroll-hint">↓ Desliza para ver el Ranking ↓</div>
+
+      <div class="seccion-ranking">
+        <h3> Tabla de Posiciones </h3>
+        <ol id="tabla-ranking-inicio" class="lista-ranking"></ol>
+      </div>
+    </div>
+
+    <!-- PANTALLA 2: JUEGO / PREGUNTAS -->
+    <div id="pantalla-juego" class="card marco-luces hidden">
+      <div class="header-juego">
+        <span id="num-pregunta">Pregunta 1/10</span>
+        <div id="temporizador">Tiempo: <span id="tiempo">10</span>s</div>
+      </div>
+
+      <h2 id="texto-pregunta">"AQUÍ VA LA PREGUNTA"</h2>
+
+      <div class="opciones-container">
+        <button class="btn-opcion" data-indice="0">"AQUÍ VA LA OPCIÓN A"</button>
+        <button class="btn-opcion" data-indice="1">"AQUÍ VA LA OPCIÓN B"</button>
+        <button class="btn-opcion" data-indice="2">"AQUÍ VA LA OPCIÓN C"</button>
+        <button class="btn-opcion" data-indice="3">"AQUÍ VA LA OPCIÓN D"</button>
+      </div>
+    </div>
+
+    <!-- PANTALLA 3: RESULTADOS Y RANKING FINAL -->
+    <div id="pantalla-resultados" class="card marco-luces hidden">
+      <h2>¡Juego Terminado!</h2>
+      <p id="resumen-puntaje"></p>
+
+      <div class="seccion-ranking">
+        <h3> Tabla de Posiciones </h3>
+        <ol id="tabla-ranking-final" class="lista-ranking"></ol>
+      </div>
+
+      <button id="btn-reiniciar">Volver al Inicio</button>
+    </div>
+
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="index.js"></script>
+</body>
+</html>

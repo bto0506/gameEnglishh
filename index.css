@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Arial Black', Impact, sans-serif;
+}
+
+body {
+  background-color: #050b14;
+  /* Fondo con efecto de rayos de concurso de TV */
+  background-image: radial-gradient(circle, #0077b6 0%, #03045e 100%);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.container {
+  width: 95%;
+  max-width: 620px;
+}
+
+/* MARCO ESTILO SHOW DE TV (Inspirado en la imagen) */
+.marco-luces {
+  background-color: #023e8a;
+  padding: 35px;
+  border-radius: 20px;
+  border: 10px solid #00a651; /* Marco verde brillante */
+  box-shadow: 0 0 30px rgba(0, 166, 81, 0.6), inset 0 0 20px rgba(0, 0, 0, 0.8);
+  outline: 4px dashed #ffffff; /* Simula los focos/luces blancas */
+  outline-offset: -10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* LOGO EN BLOQUES */
+.logo-tv {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.bloque {
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+}
+
+.b-verde {
+  background-color: #00a651;
+  color: #fff;
+  transform: rotate(-3deg);
+}
+
+.b-amarillo {
+  background-color: #ffb703;
+  color: #000;
+  transform: rotate(3deg);
+}
+
+.instruccion-registro {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+/* FORMULARIO */
+.form-registro {
+  max-width: 350px;
+  margin: 0 auto 15px auto;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 3px solid #ffb703;
+  background-color: #03045e;
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-align: center;
+  outline: none;
+  font-family: sans-serif;
+}
+
+input[type="text"]:focus {
+  border-color: #00a651;
+  box-shadow: 0 0 10px rgba(0, 166, 81, 0.8);
+}
+
+button {
+  background: linear-gradient(180deg, #ffb703 0%, #fb8500 100%);
+  color: #000;
+  border: 2px solid #fff;
+  padding: 14px 20px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 0px #b15900;
+  transition: all 0.1s ease;
+}
+
+button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0px #b15900;
+}
+
+/* AVISO DE SCROLL */
+.scroll-hint {
+  font-size: 0.85rem;
+  color: #ffb703;
+  margin: 15px 0 5px 0;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+/* SECCIÓN DEL RANKING ABAJO */
+.seccion-ranking {
+  margin-top: 20px;
+  border-top: 2px dashed rgba(255,255,255,0.3);
+  padding-top: 15px;
+}
+
+.seccion-ranking h3 {
+  color: #ffb703;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.lista-ranking {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 35px;
+  border-radius: 8px;
+  border: 2px solid #00a651;
+  max-height: 220px;
+  overflow-y: auto;
+  font-family: sans-serif;
+}
+
+.lista-ranking li {
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* PANTALLA DE JUEGO */
+.header-juego {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  background: rgba(0,0,0,0.3);
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+#texto-pregunta {
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  margin-bottom: 25px;
+}
+
+#temporizador {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* RESPUESTAS EN LISTA VERTICAL (Como las tenías, con colores de concurso) */
+.opciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-opcion {
+  background: linear-gradient(180deg, #1d3557 0%, #14213d 100%);
+  color: #fff;
+  text-align: left;
+  border: 2px solid #ffb703;
+  font-size: 1.05rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 0px #000;
+}
+
+.btn-opcion:hover {
+  background: linear-gradient(180deg, #0077b6 0%, #03045e 100%);
+  border-color: #00a651;
+  transform: translateY(-2px);
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
